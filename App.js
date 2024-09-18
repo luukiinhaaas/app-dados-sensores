@@ -1,22 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Chart as ChartJS, CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend } from 'chart.js';
-import { Line } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
 
 // Registrando os componentes do Chart.js
-ChartJS.register(CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend);
+ChartJS.register(ArcElement, Title, Tooltip, Legend);
 
 export default function App() {
-  // Dados fictícios para o gráfico
   const data = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+    labels: ['Red', 'Blue', 'Yellow'],
     datasets: [
       {
-        label: 'Aquecimento',
-        data: [20, 45, 28, 80, 99, 43, 50],
-        borderColor: 'rgba(75, 192, 192, 1)',
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        fill: false,
+        label: 'Distribuição',
+        data: [300, 50, 100],
+        backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)'],
+        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+        borderWidth: 1,
       },
     ],
   };
@@ -30,7 +29,7 @@ export default function App() {
       tooltip: {
         callbacks: {
           label: function (tooltipItem) {
-            return `Aquecimento: ${tooltipItem.raw}`;
+            return `Valor: ${tooltipItem.raw}`;
           },
         },
       },
@@ -39,8 +38,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Gráfico de Linhas</Text>
-      <Line data={data} options={options} />
+      <Text style={styles.title}>Gráfico de Rosca</Text>
+      <Doughnut data={data} options={options} />
     </View>
   );
 }
