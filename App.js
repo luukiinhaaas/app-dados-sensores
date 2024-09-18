@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from 'chart.js';
-import { Doughnut } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 
 // Registrando os componentes do Chart.js
 ChartJS.register(ArcElement, Title, Tooltip, Legend);
@@ -38,8 +38,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Gráfico de Rosca</Text>
-      <Doughnut data={data} options={options} />
+      <Text style={styles.title}>Gráfico de Pizza</Text>
+      <Pie data={data} options={options} />
     </View>
   );
 }
