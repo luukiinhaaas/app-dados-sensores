@@ -1,0 +1,6 @@
+- Lucas Oliveira - rm 551249
+- [Carlos Eduardo - rm 98847](https://github.com/carlosmeduardo-fiap/app-dados-sensores)
+- [João Felipe - rm 98411](https://github.com/lopesJotaF/Dados-Sensores)
+- [Lavínia - rm 551536](https://github.com/laviniaendo/app-dados-sensores-main)
+- [Kauan Pavan - rm 552191](https://github.com/bruiserk4/app-dados-sensores)
+- [Yan - rm 98379](https://github.com/YanFialkovitz/app-dados-sensores)
